@@ -12,7 +12,7 @@ const LONG_TERM = 7;
 const LONG_TERM_DISCOUNT = 50;
 
 function calculateRentalCost(days) {
-  if (days === LONG_TERM) {
+  if (days >= LONG_TERM) {
     return basePrice * days - LONG_TERM_DISCOUNT;
   }
 
@@ -23,6 +23,7 @@ function calculateRentalCost(days) {
   if (days < BASIC_TERM) {
     return basePrice * days;
   }
+
 
   return 40;
 }
